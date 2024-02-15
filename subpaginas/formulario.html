@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter - Infortienda</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../scroll.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="icon" href="../img/logo/logo.jfif" type="image/x-icon">
+    <link rel="icon" href="../img/logo/logo.jfif" sizes="16x16" type="image/jpg">
+    <link rel="icon" href="../img/logo/logo.jfif" sizes="32x32" type="image/jpg">
+    <link rel="icon" href="../img/logo/logo.jfif" sizes="48x48" type="image/jpg">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <form id="subscribeForm" action="reserva.html" method="post">
+                <span class="card__title">Newsletter</span>
+                <p class="card__content">
+                    Suscríbete a nuestro Newsletter para no perderte ninguna de nuestras ofertas y estar al tanto de todo!
+                </p>
+                <div class="card__form">
+                    <input placeholder="Tu Nombre" type="text" id="nombre" name="nombre">
+                    <div id="nombreError" class="error"></div>
+                    <input placeholder="Tu Email" type="text" id="correo" name="correo">
+                    <div id="correoError" class="error"></div>
+                    <input placeholder="Tu teléfono" type="text" id="tlf" name="tlf">
+                    <div id="tlfError" class="error"></div>
+                    <button type="button" class="sign-up" onclick="validateAndSubmit()">Suscribirse</button>
+                </div>
+            </form>
+        </div><br>
+        <button onclick="window.location.href='../index.html'">Inicio</button>
+    </div>
+
+    <script>
+        function validateAndSubmit() {
+            var nombre = document.getElementById("nombre").value;
+            var correo = document.getElementById("correo").value;
+            var tlf = document.getElementById("tlf").value;
+
+            var nombreError = document.getElementById('nombreError');
+            var correoError = document.getElementById('correoError');
+            var tlfError = document.getElementById('tlfError');
+
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var phonePattern = /^\d{9}$/;
+
+            nombreError.innerHTML = "";
+            correoError.innerHTML = "";
+            tlfError.innerHTML = "";
+
+            var isValid = true;
+
+            if (!/^[a-zA-Z\s]*$/.test(nombre)) {
+                nombreError.innerHTML = "Un nombre no debe tener números";
+                isValid = false;
+            }
+
+            if (!emailPattern.test(correo)) {
+                correoError.innerHTML = "Correo inválido";
+                isValid = false;
+            }
+
+            if (!phonePattern.test(tlf)) {
+                tlfError.innerHTML = "Necesitas un teléfono con 9 dígitos";
+                isValid = false;
+            }
+
+            if (isValid) {
+                localStorage.setItem("nombre", nombre);
+                localStorage.setItem("correo", correo);
+                localStorage.setItem("tlf", tlf);
+                document.getElementById("subscribeForm").submit(); // Envía el formulario
+                window.location.href = "reserva.html"            }
+        }
+    </script>  
+</body>
+</html>

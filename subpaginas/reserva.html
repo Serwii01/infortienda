@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suscripción - Infortienda</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../scroll.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="icon" href="/img/logo/logo.jfif" type="image/x-icon">
+    <link rel="icon" href="img/logo/logo.jfif" sizes="16x16" type="image/jpg">
+    <link rel="icon" href="img/logo/logo.jfif" sizes="32x32" type="image/jpg">
+    <link rel="icon" href="img/logo/logo.jfif" sizes="48x48" type="image/jpg">
+</head>
+<body>
+  <center>
+    <h1>Estos son tus datos de Suscripción al newsletter. Muchas gracias!</h1>
+    <script style="text-align: justify"> //script que recoge los datos guardados del formulario y los imprime//
+        var nombre = localStorage.getItem("nombre");
+        var correo = localStorage.getItem("correo");
+        var tlf = localStorage.getItem("tlf");
+
+        document.write('Nombre: ' + nombre + '<br>');
+        document.write('Correo: ' + correo + '<br>');
+        document.write('Teléfono: ' + tlf + '<br>');
+    </script>
+
+    <h2>Sigue navegando:</h2>
+    <div class="botonesus">
+      <div>
+        <button onclick="window.location.href='../index.html'">Inicio</button>
+      </div>
+      <div>
+        <button onclick="window.location.href='ordenadores.html'">Ordenadores</button>
+      </div>
+      <div>
+        <button onclick="window.location.href='componentes.html'">Componentes</button>
+      </div>
+      <div>
+        <button onclick="window.location.href='perifericos.html'">Periféricos</button>
+      </div>
+      <div>
+        <button onclick="window.location.href='telefonia.html'">Telefonía</button>
+      </div>
+      </div>
+      </center>
+        
+      <center>
+        <div class="imgs">
+          <img src="../img/logo/cap.PNG" alt="">
+          <img src="../img/logo/cap2.PNG" alt="">
+        </div><br>
+      
+        <div class="faq" id="faq">
+          <h2>Preguntas Frecuentes - Infortienda</h2>
+        
+          <div class="question">
+            <h3>1. ¿Cuáles son los productos que ofrece su empresa?</h3>
+            <p>Todo tipo de productos relacionados con la informática.</p>
+          </div>
+        
+          <div class="question">
+            <h3>2. ¿Cómo puedo realizar un pedido?</h3>
+            <p>A través de la web o en la tienda física ubicada en <a href="#ubicacion">Ubicación</a>.</p>
+          </div>
+        
+          <div class="question">
+            <h3>3. ¿Cuáles son las opciones de pago disponibles?</h3>
+            <p>Visa, Mastercard, American Express, Paypal y Bizum.</p>
+          </div>
+        
+          <div class="question">
+            <h3>4. ¿Cómo puedo ponerme en contacto con el servicio al cliente?</h3>
+            <p>Puedes hacerlo en <a href="#ubicacion">Contacto</a>.</p>
+          </div>
+        
+        </div><br><br>
+      
+        <div id="ubicacion" class="contacto">
+          <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.1545240719893!2d-3.6768887886866586!3d40.40542747132227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42261aef06a90d%3A0x7a03480ef4478d60!2sPcComponentes!5e0!3m2!1ses!2ses!4v1707379795676!5m2!1ses!2ses&t=k" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="info">
+            <h4>Telefono: +65939385</h4>
+            <h4>Email: contacto@infortienda.es</h4>
+          </div>
+        </div>
+        
+        <div class="footer">
+          <h3>Desarrollado por Sergio Fernández ©</h3>
+        </div>
+      
+      </center>
+      
+</body>
+</html>

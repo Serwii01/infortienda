@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Infortienda</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="scroll.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="icon" href="img/logo/logo.jfif" type="image/x-icon">
+    <link rel="icon" href="img/logo/logo.jfif" sizes="16x16" type="image/jpg">
+    <link rel="icon" href="img/logo/logo.jfif" sizes="32x32" type="image/jpg">
+    <link rel="icon" href="img/logo/logo.jfif" sizes="48x48" type="image/jpg">
+</head>
+<body>
+  <div class="header" id="main-header">
+    <a href="index.html"><img src="img/logo/logo.jfif" alt="Logo" class="logo"></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#faq">FaQ</a></li>
+          <li><a href="#ubicacion">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="search-box">
+        <input type="text" placeholder="Buscar" id="busca" list="lista">
+          <datalist id="lista">
+            <option value="Ordenadores"></option>
+            <option value="Componentes"></option>
+            <option value="Periféricos"></option>
+            <option value="Telefonía"></option>
+          </datalist>
+          <button type="button" onclick="buscar()">Buscar</button>
+      </div>
+  </div>
+
+  <div class="slider-container">
+    <div class="slider">
+      <div class="slide"><img src="img/slider/1.webp" alt="Imagen 2"></div>
+      <div class="slide"><img src="img/slider/2.webp" alt="Imagen 3"></div>
+    </div>
+  </div>
+
+    <div class="botones">
+      <div>
+        <button onclick="window.location.href='subpaginas/ordenadores.html'">Ordenadores</button>
+      </div>
+      <div>
+        <button onclick="window.location.href='subpaginas/componentes.html'">Componentes</button>
+      </div>
+      <div>
+        <button onclick="window.location.href='subpaginas/perifericos.html'">Periféricos</button>
+      </div>
+      <div>
+        <button onclick="window.location.href='subpaginas/telefonia.html'">Telefonía</button>
+      </div>
+    </div>
+
+  <div class="buscador">
+    <input type="text" name="buscador" id="buscador" placeholder="Buscar en esta página">
+  </div><br><br>
+
+    <div class="seccion">
+      <h2>Productos Destacados</h2>
+      <div class="productos">
+
+        <div class="articulo">
+          <img src="img/ordenadores/pc1.webp" alt="">
+          <h3><script>document.write(productos[0]);</script> - PC Ryzen</h3>
+          <p class="precios">779€</p>
+          <p class="disponibles">Disponible</p>
+          <button onclick="alert('Ryzen 5 3600 + 16Gb ram + GTX 1650')">Info</button>
+        </div>
+
+        <div class="articulo">
+          <img src="img/ordenadores/pc2.webp" alt="">
+          <h3><script>document.write(productos[0]);</script> - PC Intel</h3>
+          <p class="precios">850€</p>
+          <p class="disponibles">Disponible</p>
+          <button onclick="alert('Intel i9 9900K + 32Gb ram + RTX 2090')">Info</button>
+        </div>
+
+        <div class="articulo">
+          <img src="img/componentes/3070.webp" alt="">
+          <h3><script>document.write(productos[1]);</script> - RTX 3070</h3>
+          <p class="precios">589.95€</p>
+          <p class="disponibles">Disponible</p>
+          <button onclick="alert('8Gb VRAM')">Info</button>
+        </div>
+
+        <div class="articulo">
+          <img src="img/componentes/6700.webp" alt="">
+          <h3><script>document.write(productos[1]);</script> - RX 6700</h3>
+          <p class="precios">456€</p>
+          <p class="disponibles">Disponible</p>
+          <button onclick="alert('12Gb VRAM')">Info</button>
+        </div>
+
+        <div class="articulo">
+          <img src="img/perifericos/superlight.webp" alt="">
+          <h3><script>document.write(productos[2]);</script> - G PRO</h3>
+          <p class="precios">240.56€</p>
+          <p class="disponibles">Disponible</p>
+          <button onclick="alert('32000 dpi')">Info</button>
+        </div>
+
+        <div class="articulo">
+          <img src="img/telefonia/iphone14.webp" alt="">
+          <h3><script>document.write(productos[3]);</script> - Iphone 14</h3>
+          <p class="precios">799€</p>
+          <p class="disponibles">Disponible</p>
+          <button onclick="alert('128 gb')">Info</button>
+        </div>
+
+      </div><br><br>
+   </div><br><br>
+  
+  <center>
+  <div class="newsletter">
+    <h2>Suscríbete a nuestro Newsletter!</h2>
+    <button onclick="window.location.href='subpaginas/formulario.html'">Aquí!</button>
+  </div><br>
+
+  <div class="imgs">
+    <img src="img/logo/cap.PNG" alt="">
+    <img src="img/logo/cap2.PNG" alt="">
+  </div><br>
+
+  <div class="faq" id="faq">
+    <h2>Preguntas Frecuentes - Infortienda</h2>
+  
+    <div class="question">
+      <h3>1. ¿Cuáles son los productos que ofrece su empresa?</h3>
+      <p>Todo tipo de productos relacionados con la informática.</p>
+    </div>
+  
+    <div class="question">
+      <h3>2. ¿Cómo puedo realizar un pedido?</h3>
+      <p>A través de la web o en la tienda física ubicada en <a href="#ubicacion">Ubicación</a>.</p>
+    </div>
+  
+    <div class="question">
+      <h3>3. ¿Cuáles son las opciones de pago disponibles?</h3>
+      <p>Visa, Mastercard, American Express, Paypal y Bizum.</p>
+    </div>
+  
+    <div class="question">
+      <h3>4. ¿Cómo puedo ponerme en contacto con el servicio al cliente?</h3>
+      <p>Puedes hacerlo en <a href="#ubicacion">Contacto</a>.</p>
+    </div>
+  
+  </div><br><br>
+
+  <div id="ubicacion" class="contacto">
+
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.1545240719893!2d-3.6768887886866586!3d40.40542747132227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42261aef06a90d%3A0x7a03480ef4478d60!2sPcComponentes!5e0!3m2!1ses!2ses!4v1707379795676!5m2!1ses!2ses&t=k" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="info">
+      <h4>Telefono: +34 659 393 385</h4>
+      <h4>Email: contacto@infortienda.es</h4>
+    </div>
+
+    <div class="rrss">
+      <img src="img/rrss/YT-logo.png" alt="">
+      <img src="img/rrss/twt.png" alt="">
+      <img src="img/rrss/instagram.webp" alt="">
+    </div>
+  </div>
+  
+  <div class="footer">
+    <h3>Desarrollado por Sergio Fernández ©</h3>
+  </div>
+
+  
+
+</center>
+</body>
+</html>
